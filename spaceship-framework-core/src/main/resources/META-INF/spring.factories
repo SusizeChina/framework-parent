@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.lhq.cloud.core.autoconfigure.LogConfiguration,\
+com.lhq.cloud.core.autoconfigure.FeignConfiguration,\
+com.lhq.cloud.core.autoconfigure.HttpConfiguration,\
+com.lhq.cloud.core.autoconfigure.UtilConfiguration
