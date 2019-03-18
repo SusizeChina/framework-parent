@@ -1,0 +1,27 @@
+server:
+  port: 9001
+  servlet: 
+    context-path: /
+spring:
+  application:
+    name: spring-cloud-eureka-server
+#  security:
+#    user:
+#      name: eureka
+#      password: eureka
+eureka: 
+  instance:
+    prefer-ip-address: true
+    status-page-url-path: /actuator/info
+    health-check-url-path: /actuator/health
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    prefer-same-zone-eureka: true
+    region: changsha
+    availability-zones:
+      changsha: zone1,zone2
+    serviceUrl: 
+        zone1: http://localhost:9001/eureka/,http://localhost:9002/eureka/
+        zone2: http://localhost:9003/eureka/
