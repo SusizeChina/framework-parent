@@ -41,5 +41,6 @@
 		<module>spring-cloud-gateway-router</module>
 		<module>spring-cloud-zipkin-server</module>
 		<module>spring-cloud-zuul-center</module>
+		<module>spring-cloud-sso-server</module>
 	</modules>
 </project>
