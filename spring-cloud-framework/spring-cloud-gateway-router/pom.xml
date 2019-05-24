@@ -10,6 +10,10 @@
 	</parent>
 
 	<artifactId>spring-cloud-gateway-router</artifactId>
+	
+	<properties>
+		<framework.version>0.0.1-SNAPSHOT</framework.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
