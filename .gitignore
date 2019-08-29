@@ -34,3 +34,4 @@ spring-cloud-service-provider/src/main/resources/rebel.xml
 *.iml
 .idea
 *.log
+!/framework-parent.iml
