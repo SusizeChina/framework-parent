@@ -1,11 +1,11 @@
 server:
   port: 7777
-spring: 
+spring:
   application:
     name: spring-cloud-quartz-center
   quartz:
-      #相关属性配置
-    properties: 
+    #相关属性配置
+    properties:
       org:
         quartz:
           scheduler:
@@ -27,13 +27,13 @@ spring:
     job-store-type: jdbc
     jdbc:
       initialize-schema: always
-  datasource: 
+  datasource:
     url: jdbc:mysql://127.0.0.1:3306/quartz?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&useSSL=false
     username: root
     password: lihuiquan1992
     driver-class-name: com.mysql.jdbc.Driver
 mybatis:
   config-location: classpath:mybatis-config.xml
-  mapper-locations: 
-  - classpath:mapping/*.xml
+  mapper-locations:
+    - classpath:mapping/*.xml
   type-aliases-package: com.lhq.cloud.quartz.entity

@@ -1,58 +1,58 @@
 spring:
   application:
     name: spring-cloud-gateway-router
-  zipkin: 
+  zipkin:
     locator:
       discovery:
         enabled: true
     base-url:  http://localhost:7001/
-  sleuth: 
-     sampler:
+  sleuth:
+    sampler:
       probability: 1.0
-  cloud: 
-    gateway: 
-      discovery: 
+  cloud:
+    gateway:
+      discovery:
         locator:
           enabled: false # gateway开启服务注册和发现的功能(改为false，如果不改的话，http://serviceid//uri这种方式也能访问)
           lowerCaseServiceId: true # 将请求路径上的服务名配置为小写（因为服务注册的时候，向注册中心注册时将服务名转成大写的了）
       routes: # 路由规则   
-      - id: spring-cloud-service-provider #唯一 ID
-        uri: lb://SPRING-CLOUD-SERVICE-PROVIDER
-        predicates: 
-          - Path=/provider/**
-#         - Header=X-Request-Id,\d+
-#         - Cookie=name, lhq (支持正则表达式，无参数时报错)
-        filters: 
-          - AddRequestHeader=X-Request-Foo,Bar1
-#         - RewritePath=/foo/(?<segment>.*), /$\{segment} (重写路径)
-          - StripPrefix=1
-      - id: spring-cloud-fegin-consumer #唯一 ID
-        uri: lb://SPRING-CLOUD-FEGIN-CONSUMER
-        predicates: 
-          - Path=/consumer/**
-#         - Header=X-Request-Id,\d+  (支持正则表达式，无参数时报错)
-#         - Cookie=name, lhq (支持正则表达式，无参数时报错)
-        filters: 
-          - AddRequestHeader=X-Request-Foo, Bar2
-#         - RewritePath=/foo/(?<segment>.*), /$\{segment} (重写路径)
-          - StripPrefix=1
+        - id: spring-cloud-service-provider #唯一 ID
+          uri: lb://SPRING-CLOUD-SERVICE-PROVIDER
+          predicates:
+            - Path=/provider/**
+          #         - Header=X-Request-Id,\d+
+          #         - Cookie=name, lhq (支持正则表达式，无参数时报错)
+          filters:
+            - AddRequestHeader=X-Request-Foo,Bar1
+            #         - RewritePath=/foo/(?<segment>.*), /$\{segment} (重写路径)
+            - StripPrefix=1
+        - id: spring-cloud-fegin-consumer #唯一 ID
+          uri: lb://SPRING-CLOUD-FEGIN-CONSUMER
+          predicates:
+            - Path=/consumer/**
+          #         - Header=X-Request-Id,\d+  (支持正则表达式，无参数时报错)
+          #         - Cookie=name, lhq (支持正则表达式，无参数时报错)
+          filters:
+            - AddRequestHeader=X-Request-Foo, Bar2
+            #         - RewritePath=/foo/(?<segment>.*), /$\{segment} (重写路径)
+            - StripPrefix=1
 server:
   port: 5000
-eureka: 
-  instance: 
+eureka:
+  instance:
     prefer-ip-address: true
     status-page-url-path: /actuator/info
     health-check-url-path: /actuator/health
-    metadata-map: 
+    metadata-map:
       zone: zone1
-  client: 
+  client:
     register-with-eureka: true
     fetch-registry: true
     prefer-same-zone-eureka: true
     region: changsha
     availability-zones:
       changsha: zone1,zone2
-    serviceUrl: 
+    serviceUrl:
       zone1: http://localhost:9001/eureka/,http://localhost:9002/eureka/
       zone2: http://localhost:9003/eureka/
 logging:

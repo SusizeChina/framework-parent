@@ -2,7 +2,7 @@ package com.lhq.cloud.security.sso.common.constant;
 
 public enum LoginType {
 
-	REDIRECT,
+    REDIRECT,
 
-	JSON;
+    JSON;
 }

@@ -1,11 +1,11 @@
 spring:
-  zipkin: 
+  zipkin:
     locator:
       discovery:
         enabled: true
     base-url:  http://localhost:7001/
-  sleuth: 
-     sampler:
+  sleuth:
+    sampler:
       probability: 1.0
   application:
     name: spring-cloud-zuul-center
@@ -19,20 +19,20 @@ zuul:
     consumer:                                               # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
       path: /consumer/**                                    # 想要映射到的路径
       service-id: spring-cloud-fegin-consumer           # Eureka中的serviceId
-eureka: 
-  instance: 
+eureka:
+  instance:
     prefer-ip-address: true
     status-page-url-path: /actuator/info
     health-check-url-path: /actuator/health
-    metadata-map: 
+    metadata-map:
       zone: zone1
-  client: 
+  client:
     register-with-eureka: true
     fetch-registry: true
     prefer-same-zone-eureka: true
     region: changsha
     availability-zones:
       changsha: zone1,zone2
-    serviceUrl: 
+    serviceUrl:
       zone1: http://localhost:9001/eureka/,http://localhost:9002/eureka/
       zone2: http://localhost:9003/eureka/

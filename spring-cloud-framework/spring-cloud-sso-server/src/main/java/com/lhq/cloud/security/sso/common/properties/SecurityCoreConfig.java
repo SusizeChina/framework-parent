@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.lhq.cloud.security.sso.common.properties;
 

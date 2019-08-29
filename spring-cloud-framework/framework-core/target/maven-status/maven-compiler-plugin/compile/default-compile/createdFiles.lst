@@ -1,0 +1,17 @@
+com\lhq\cloud\core\test\User.class
+com\lhq\cloud\core\log\TraceLogUtils.class
+com\lhq\cloud\core\autoconfigure\SwaggerConfiguration.class
+com\lhq\cloud\core\autoconfigure\LogConfiguration.class
+com\lhq\cloud\core\swagger\SwaggerApi.class
+com\lhq\cloud\core\fegin\FeginRequestInterceptor.class
+com\lhq\cloud\core\autoconfigure\FeignConfiguration.class
+com\lhq\cloud\core\autoconfigure\HttpConfiguration$1.class
+com\lhq\cloud\core\log\ThreadMdcUtil$ThreadPoolExecutorMdcWrapper.class
+com\lhq\cloud\core\log\ThreadMdcUtil.class
+com\lhq\cloud\core\log\ThreadMdcUtil$ThreadPoolTaskExecutorMdcWrapper.class
+com\lhq\cloud\core\autoconfigure\HttpConfiguration.class
+com\lhq\cloud\core\autoconfigure\UtilConfiguration.class
+com\lhq\cloud\core\log\LogConstants.class
+com\lhq\cloud\core\log\TraceLogHandlerInterceptor.class
+com\lhq\cloud\core\log\InterceptorConfiguration.class
+com\lhq\cloud\core\log\ThreadMdcUtil$ForkJoinPoolMdcWrapper.class

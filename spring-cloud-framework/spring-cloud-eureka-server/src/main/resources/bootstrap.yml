@@ -1,6 +1,6 @@
 server:
   port: 9001
-  servlet: 
+  servlet:
     context-path: /
 spring:
   application:
@@ -9,7 +9,7 @@ spring:
 #    user:
 #      name: eureka
 #      password: eureka
-eureka: 
+eureka:
   instance:
     prefer-ip-address: true
     status-page-url-path: /actuator/info
@@ -22,6 +22,6 @@ eureka:
     region: changsha
     availability-zones:
       changsha: zone1,zone2
-    serviceUrl: 
-        zone1: http://localhost:9001/eureka/,http://localhost:9002/eureka/
-        zone2: http://localhost:9003/eureka/
+    serviceUrl:
+      zone1: http://localhost:9001/eureka/,http://localhost:9002/eureka/
+      zone2: http://localhost:9003/eureka/

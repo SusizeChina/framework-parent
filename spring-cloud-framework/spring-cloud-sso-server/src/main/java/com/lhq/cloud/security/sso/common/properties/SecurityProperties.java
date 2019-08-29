@@ -6,14 +6,14 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "dkd.security")
 public class SecurityProperties {
 
-	BrowserProperties browser = new BrowserProperties();
+    BrowserProperties browser = new BrowserProperties();
 
-	public BrowserProperties getBrowser() {
-		return browser;
-	}
+    public BrowserProperties getBrowser() {
+        return browser;
+    }
 
-	public void setBrowser(BrowserProperties browser) {
-		this.browser = browser;
-	}
+    public void setBrowser(BrowserProperties browser) {
+        this.browser = browser;
+    }
 
 }

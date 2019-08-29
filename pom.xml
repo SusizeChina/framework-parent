@@ -1,55 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.lhq.cloud</groupId>
-	<artifactId>framework-parent</artifactId>
-	<version>${framework.version}</version>
-	<packaging>pom</packaging>
+    <groupId>com.lhq.cloud</groupId>
+    <artifactId>framework-parent</artifactId>
+    <version>${framework.version}</version>
+    <packaging>pom</packaging>
 
-	<properties>
-		<java.version>1.8</java.version>
-		<framework.version>0.0.1-SNAPSHOT</framework.version>
-	</properties>
+    <properties>
+        <java.version>1.8</java.version>
+        <framework.version>0.0.1-SNAPSHOT</framework.version>
+    </properties>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<!--指定该Main Class为全局的唯一入口 -->
-					<!-- <mainClass>com.lhq.cloud.main</mainClass> -->
-					<layout>ZIP</layout>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<!--可以把依赖的包都打包到生成的Jar包中 -->
-							<goal>repackage</goal>
-						</goals>
-						<!--可以生成不含依赖包的不可执行Jar包 -->
-						<configuration>
-							<classifier>exec</classifier>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<!--默认关掉单元测试 -->
-					<skipTests>true</skipTests>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--指定该Main Class为全局的唯一入口 -->
+                    <!-- <mainClass>com.lhq.cloud.main</mainClass> -->
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!--可以把依赖的包都打包到生成的Jar包中 -->
+                            <goal>repackage</goal>
+                        </goals>
+                        <!--可以生成不含依赖包的不可执行Jar包 -->
+                        <configuration>
+                            <classifier>exec</classifier>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!--默认关掉单元测试 -->
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-	<modules>
-		<module>framework-dependencies</module>
-		<module>spring-cloud-framework</module>
-	</modules>
+    <modules>
+        <module>framework-dependencies</module>
+        <module>spring-cloud-framework</module>
+        <module>spring-cloud-service-provider</module>
+        <module>spring-cloud-fegin-consumer</module>
+    </modules>
 </project>

@@ -4,8 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登录</title>
     <style>
-        body{ text-align:center}
-        .div{ margin:0 auto; width:400px; height:100px; border:1px solid #F00}
+        body {
+            text-align: center
+        }
+
+        .div {
+            margin: 0 auto;
+            width: 400px;
+            height: 100px;
+            border: 1px solid #F00
+        }
     </style>
 </head>
 
@@ -25,7 +33,9 @@
                 <td><input class="password" type="password" name="password"></td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit">登录</button></td>
+                <td colspan="2">
+                    <button type="submit">登录</button>
+                </td>
             </tr>
         </table>
     </div>
@@ -63,23 +73,23 @@
     //     };
     // }
 
-    function getCookie(name)
-    {
-        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
 
-        if(arr=document.cookie.match(reg))
+        if (arr = document.cookie.match(reg))
 
             return unescape(arr[2]);
         else
             return null;
     }
+
     //格式化参数
     function formatParams(data) {
         var arr = [];
         for (var name in data) {
             arr.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
         }
-        arr.push(("v=" + Math.random()).replace(".",""));
+        arr.push(("v=" + Math.random()).replace(".", ""));
         return arr.join("&");
     }
 </script>

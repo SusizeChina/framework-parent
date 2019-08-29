@@ -8,13 +8,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SuppressWarnings("deprecation")
 public class InterceptorConfiguration extends WebMvcConfigurerAdapter {
 
-	@Autowired
-	private TraceLogHandlerInterceptor traceLogHandlerInterceptor;
+    @Autowired
+    private TraceLogHandlerInterceptor traceLogHandlerInterceptor;
 
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		InterceptorRegistration addInterceptor = registry.addInterceptor(traceLogHandlerInterceptor);
-		addInterceptor.addPathPatterns("/**");
-	}
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        InterceptorRegistration addInterceptor = registry.addInterceptor(traceLogHandlerInterceptor);
+        addInterceptor.addPathPatterns("/**");
+    }
 
 }
