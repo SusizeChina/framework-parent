@@ -1,19 +1,41 @@
 server:
   port: 4001
 spring:
+<<<<<<< HEAD
+  zipkin: 
+=======
   zipkin:
+>>>>>>> 09fdf8c5e3a78daf75eca1daba2302128adfd8d3
     locator:
       discovery:
         enabled: true
     base-url:  http://localhost:7001/
+<<<<<<< HEAD
+  sleuth: 
+     sampler:
+=======
   sleuth:
     sampler:
+>>>>>>> 09fdf8c5e3a78daf75eca1daba2302128adfd8d3
       probability: 1.0
   application:
     name: spring-cloud-fegin-consumer
   cloud:
     config:
       label: master
+<<<<<<< HEAD
+      discovery: 
+        enabled: true
+        serviceId: spring-cloud-config-server
+eureka:         
+  instance: 
+    prefer-ip-address: true
+    status-page-url-path: /actuator/info
+    health-check-url-path: /actuator/health
+    metadata-map: 
+      zone: zone1
+  client: 
+=======
       discovery:
         enabled: true
         serviceId: spring-cloud-config-server
@@ -25,12 +47,17 @@ eureka:
     metadata-map:
       zone: zone1
   client:
+>>>>>>> 09fdf8c5e3a78daf75eca1daba2302128adfd8d3
     register-with-eureka: true
     fetch-registry: true
     prefer-same-zone-eureka: true
     region: changsha
     availability-zones:
       changsha: zone1,zone2
+<<<<<<< HEAD
+    serviceUrl: 
+=======
     serviceUrl:
+>>>>>>> 09fdf8c5e3a78daf75eca1daba2302128adfd8d3
       zone1: http://localhost:9001/eureka/,http://localhost:9002/eureka/
       zone2: http://localhost:9003/eureka/
