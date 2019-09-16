@@ -9,14 +9,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SpringCloudFeginConsumerApplicationTests {
 
-<<<<<<< HEAD
-	@Test
-	public void contextLoads() {
-	}
-=======
     @Test
     public void contextLoads() {
     }
->>>>>>> 09fdf8c5e3a78daf75eca1daba2302128adfd8d3
 
 }
