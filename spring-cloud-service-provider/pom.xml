@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
+<<<<<<< HEAD
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -69,5 +70,54 @@
 			<url>https://repo.spring.io/milestone</url>
 		</repository>
 	</repositories>
+=======
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.lhq.cloud</groupId>
+        <artifactId>framework-parent</artifactId>
+        <version>${framework.version}</version>
+    </parent>
+
+    <artifactId>spring-cloud-service-provider</artifactId>
+
+    <properties>
+        <framework.version>0.0.1-SNAPSHOT</framework.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.lhq.cloud</groupId>
+            <artifactId>framework-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.lhq.cloud</groupId>
+                <artifactId>framework-dependencies</artifactId>
+                <version>${framework.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+>>>>>>> 09fdf8c5e3a78daf75eca1daba2302128adfd8d3
 
 </project>

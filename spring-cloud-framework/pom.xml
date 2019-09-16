@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.lhq.cloud</groupId>
+        <artifactId>framework-parent</artifactId>
+        <version>${framework.version}</version>
+    </parent>
+
+
+    <artifactId>spring-cloud-framework</artifactId>
+    <packaging>pom</packaging>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.lhq.cloud</groupId>
+                <artifactId>framework-dependencies</artifactId>
+                <version>${framework.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>framework-core</module>
+        <module>spring-cloud-config-server</module>
+        <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-gateway-router</module>
+        <module>spring-cloud-zipkin-server</module>
+        <module>spring-cloud-zuul-center</module>
+        <module>spring-cloud-sso-server</module>
+        <module>spring-cloud-quartz-center</module>
+    </modules>
+</project>

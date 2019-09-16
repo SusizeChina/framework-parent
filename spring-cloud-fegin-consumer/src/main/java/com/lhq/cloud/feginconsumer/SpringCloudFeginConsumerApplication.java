@@ -10,8 +10,14 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients(basePackages = "com.lhq.cloud.service.provider.client")
 public class SpringCloudFeginConsumerApplication {
 
+<<<<<<< HEAD
 	public static void main(String[] args) {
 		SpringApplication.run(SpringCloudFeginConsumerApplication.class, args);
 	}
+=======
+    public static void main(String[] args) {
+        SpringApplication.run(SpringCloudFeginConsumerApplication.class, args);
+    }
+>>>>>>> 09fdf8c5e3a78daf75eca1daba2302128adfd8d3
 
 }
