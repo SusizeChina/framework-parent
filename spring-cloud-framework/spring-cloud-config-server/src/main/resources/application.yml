@@ -25,7 +25,6 @@ eureka:
     prefer-same-zone-eureka: true
     region: changsha
     availability-zones:
-      changsha: zone1,zone2
+      changsha: zone1
     serviceUrl:
-      zone1: http://localhost:9001/eureka/,http://localhost:9002/eureka/
-      zone2: http://localhost:9003/eureka/
+      zone1: http://localhost:9001/eureka
